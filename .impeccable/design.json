@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-08T11:02:49.9801341+08:00",
+  "title": "Design System: 浙旅智创",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "湿墨",
+        "canonical": "#162321",
+        "tonalRamp": ["oklch(15% 0.018 173)", "oklch(25% 0.018 173)", "oklch(36% 0.016 173)", "oklch(48% 0.014 173)", "oklch(61% 0.012 173)", "oklch(73% 0.010 173)", "oklch(85% 0.007 173)", "oklch(95% 0.004 173)"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "石灰字",
+        "canonical": "#697976",
+        "tonalRamp": ["oklch(15% 0.014 174)", "oklch(27% 0.014 174)", "oklch(39% 0.013 174)", "oklch(51% 0.012 174)", "oklch(63% 0.011 174)", "oklch(75% 0.009 174)", "oklch(86% 0.006 174)", "oklch(95% 0.003 174)"]
+      },
+      "muted-subtle": {
+        "role": "neutral",
+        "displayName": "远雾字",
+        "canonical": "#96a3a1",
+        "tonalRamp": ["oklch(15% 0.011 174)", "oklch(27% 0.011 174)", "oklch(39% 0.010 174)", "oklch(51% 0.009 174)", "oklch(63% 0.008 174)", "oklch(75% 0.007 174)", "oklch(86% 0.005 174)", "oklch(95% 0.002 174)"]
+      },
+      "canvas-mist": {
+        "role": "neutral",
+        "displayName": "晨雾画布",
+        "canonical": "#f3f7f6",
+        "tonalRamp": ["oklch(15% 0.012 174)", "oklch(27% 0.012 174)", "oklch(39% 0.011 174)", "oklch(51% 0.010 174)", "oklch(63% 0.009 174)", "oklch(75% 0.007 174)", "oklch(86% 0.005 174)", "oklch(95% 0.004 174)"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "宣纸白",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(100% 0 0)"]
+      },
+      "surface-soft": {
+        "role": "neutral",
+        "displayName": "薄雾面",
+        "canonical": "#f7faf9",
+        "tonalRamp": ["oklch(15% 0.008 174)", "oklch(27% 0.008 174)", "oklch(39% 0.007 174)", "oklch(51% 0.006 174)", "oklch(63% 0.006 174)", "oklch(75% 0.005 174)", "oklch(87% 0.004 174)", "oklch(97% 0.003 174)"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "水线",
+        "canonical": "#dde7e4",
+        "tonalRamp": ["oklch(15% 0.015 174)", "oklch(27% 0.015 174)", "oklch(39% 0.014 174)", "oklch(51% 0.013 174)", "oklch(63% 0.012 174)", "oklch(75% 0.010 174)", "oklch(87% 0.008 174)", "oklch(94% 0.006 174)"]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "深水线",
+        "canonical": "#cbd9d5",
+        "tonalRamp": ["oklch(15% 0.020 174)", "oklch(27% 0.020 174)", "oklch(39% 0.019 174)", "oklch(51% 0.018 174)", "oklch(63% 0.016 174)", "oklch(75% 0.014 174)", "oklch(87% 0.010 174)", "oklch(95% 0.006 174)"]
+      },
+      "mineral-teal": {
+        "role": "primary",
+        "displayName": "矿物青玉",
+        "canonical": "#397f7a",
+        "tonalRamp": ["oklch(15% 0.055 184)", "oklch(27% 0.065 184)", "oklch(39% 0.075 184)", "oklch(51% 0.085 184)", "oklch(63% 0.075 184)", "oklch(75% 0.060 184)", "oklch(86% 0.038 184)", "oklch(95% 0.018 184)"]
+      },
+      "mineral-teal-strong": {
+        "role": "primary",
+        "displayName": "深潭青",
+        "canonical": "#286a66",
+        "tonalRamp": ["oklch(15% 0.065 184)", "oklch(27% 0.075 184)", "oklch(39% 0.085 184)", "oklch(51% 0.090 184)", "oklch(63% 0.078 184)", "oklch(75% 0.060 184)", "oklch(86% 0.038 184)", "oklch(95% 0.018 184)"]
+      },
+      "mineral-teal-soft": {
+        "role": "primary",
+        "displayName": "薄荷雾",
+        "canonical": "#e3f1ee",
+        "tonalRamp": ["oklch(15% 0.045 184)", "oklch(27% 0.045 184)", "oklch(39% 0.043 184)", "oklch(51% 0.040 184)", "oklch(63% 0.036 184)", "oklch(75% 0.030 184)", "oklch(86% 0.022 184)", "oklch(95% 0.014 184)"]
+      },
+      "lake-cyan": {
+        "role": "secondary",
+        "displayName": "湖水青",
+        "canonical": "#6aa7b2",
+        "tonalRamp": ["oklch(15% 0.050 211)", "oklch(27% 0.060 211)", "oklch(39% 0.070 211)", "oklch(51% 0.078 211)", "oklch(63% 0.070 211)", "oklch(75% 0.056 211)", "oklch(86% 0.036 211)", "oklch(95% 0.018 211)"]
+      },
+      "success": {
+        "role": "tertiary",
+        "displayName": "山林绿",
+        "canonical": "#3a7b5a",
+        "tonalRamp": ["oklch(15% 0.070 154)", "oklch(27% 0.080 154)", "oklch(39% 0.090 154)", "oklch(51% 0.095 154)", "oklch(63% 0.082 154)", "oklch(75% 0.064 154)", "oklch(86% 0.040 154)", "oklch(95% 0.020 154)"]
+      },
+      "warning": {
+        "role": "tertiary",
+        "displayName": "赭石黄",
+        "canonical": "#b77934",
+        "tonalRamp": ["oklch(15% 0.080 69)", "oklch(27% 0.095 69)", "oklch(39% 0.110 69)", "oklch(51% 0.120 69)", "oklch(63% 0.105 69)", "oklch(75% 0.080 69)", "oklch(86% 0.050 69)", "oklch(95% 0.025 69)"]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "朱砂红",
+        "canonical": "#bd554f",
+        "tonalRamp": ["oklch(15% 0.085 28)", "oklch(27% 0.105 28)", "oklch(39% 0.125 28)", "oklch(51% 0.140 28)", "oklch(63% 0.120 28)", "oklch(75% 0.090 28)", "oklch(86% 0.055 28)", "oklch(95% 0.025 28)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "创建命题", "purpose": "仅用于极速创建页的核心命题。" },
+      "headline": { "displayName": "页面标题", "purpose": "页面一级标题与工作流主标题。" },
+      "title": { "displayName": "面板标题", "purpose": "顶栏、面板与关键项目标题。" },
+      "body": { "displayName": "正文", "purpose": "说明、创建提示和连续阅读内容。" },
+      "label": { "displayName": "操作标签", "purpose": "状态、字段名、按钮与元数据。" }
+    },
+    "shadows": [
+      { "name": "panel-low", "value": "0 8px 24px rgba(48,82,75,.04)", "purpose": "常规面板的最低层次感。" },
+      { "name": "card-rest", "value": "0 9px 30px rgba(45,78,72,.045)", "purpose": "项目卡片默认状态。" },
+      { "name": "ambient-raised", "value": "0 14px 38px rgba(38,77,69,.08)", "purpose": "卡片悬停、工作区和通知浮层。" },
+      { "name": "action-glow", "value": "0 7px 18px rgba(57,127,122,.15)", "purpose": "主要按钮默认状态。" },
+      { "name": "mist-overlay", "value": "0 22px 65px rgba(44,80,73,.12)", "purpose": "极速创建输入等少数沉浸式焦点容器。" }
+    ],
+    "motion": [
+      { "name": "state-standard", "value": "200ms ease", "purpose": "颜色、背景、边框和常规显隐状态。" },
+      { "name": "press", "value": "150ms ease", "purpose": "按钮按下与轻微缩放反馈。" },
+      { "name": "surface-enter", "value": "500ms cubic-bezier(.16,1,.3,1)", "purpose": "项目卡片与大型表面的进入和抬升。" },
+      { "name": "media-zoom", "value": "600ms cubic-bezier(.16,1,.3,1)", "purpose": "卡片影像的低幅度悬停缩放。" },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "用户请求减少动态时覆盖动画和过渡。" }
+    ],
+    "breakpoints": [
+      { "name": "wide-workspace", "value": "1180px" },
+      { "name": "compact-navigation", "value": "900px" },
+      { "name": "single-column", "value": "680px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "创建、保存、通过等每个视图唯一的主动作。",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">新建项目</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:0 15px; border:1px solid var(--accent); border-radius:10px; color:#fff; background:var(--accent); box-shadow:0 7px 18px rgba(57,127,122,.15); font:600 11px/1.4 'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; cursor:pointer; transition:background .2s ease,border-color .2s ease,transform .15s ease,box-shadow .2s ease; } .ds-btn-primary:hover { border-color:var(--accent-strong); background:var(--accent-strong); box-shadow:0 9px 24px rgba(57,127,122,.22); } .ds-btn-primary:focus-visible { outline:3px solid rgba(57,127,122,.25); outline-offset:2px; } .ds-btn-primary:active { transform:scale(.98); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "取消、清除与其他非主导操作。",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">清除筛选</button>",
+      "css": ".ds-btn-secondary { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:0 15px; border:1px solid var(--line); border-radius:10px; color:#455754; background:#fff; font:600 11px/1.4 'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; cursor:pointer; transition:background .2s ease,border-color .2s ease,transform .15s ease; } .ds-btn-secondary:hover { border-color:var(--line-strong); background:#f8fbfa; } .ds-btn-secondary:focus-visible { outline:3px solid rgba(57,127,122,.25); outline-offset:2px; } .ds-btn-secondary:active { transform:scale(.98); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "搜索、配置和设置页使用的紧凑输入字段。",
+      "html": "<label class=\"ds-field\"><span>项目名称</span><input type=\"text\" value=\"西湖夏日夜游\" /></label>",
+      "css": ".ds-field { display:grid; gap:7px; color:var(--ink); font:600 11px/1.4 'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; } .ds-field input { height:39px; padding:0 11px; border:1px solid var(--line); border-radius:9px; outline:0; color:var(--ink); background:#fff; font:400 11px/1.4 'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; transition:border-color .2s ease,box-shadow .2s ease; } .ds-field input:hover { border-color:var(--line-strong); } .ds-field input:focus-visible { border-color:var(--accent); box-shadow:0 0 0 3px rgba(57,127,122,.16); }"
+    },
+    {
+      "name": "Active Navigation Item",
+      "kind": "nav",
+      "refersTo": "nav-active",
+      "description": "左侧工作轨中表示当前工作上下文的活动项。",
+      "html": "<button class=\"ds-nav-item\" type=\"button\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg><span>项目中心</span></button>",
+      "css": ".ds-nav-item { display:flex; align-items:center; gap:12px; width:210px; min-height:46px; padding:0 13px; border:0; border-radius:12px; color:var(--accent-strong); background:var(--accent-soft); font:600 13px/1.4 'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; cursor:pointer; transition:color .2s ease,background .2s ease,transform .2s ease; } .ds-nav-item:hover { color:var(--ink); background:#dbece8; transform:translateX(2px); } .ds-nav-item:focus-visible { outline:3px solid rgba(57,127,122,.25); outline-offset:2px; } .ds-nav-item:active { transform:translateX(1px) scale(.99); }"
+    },
+    {
+      "name": "Review Status Chip",
+      "kind": "chip",
+      "refersTo": "chip-status",
+      "description": "在项目卡片和审核队列中表达待审核状态。",
+      "html": "<span class=\"ds-status-review\">待审核</span>",
+      "css": ".ds-status-review { display:inline-flex; align-items:center; gap:5px; padding:5px 8px; border-radius:7px; color:#98651f; background:rgba(255,244,224,.92); font:600 11px/1.4 'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; } .ds-status-review::before { width:6px; height:6px; border-radius:50%; background:currentColor; content:''; } .ds-status-review:hover { background:#ffefd2; } .ds-status-review:focus-visible { outline:3px solid rgba(183,121,52,.22); outline-offset:2px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "项目中心用于扫描影像、状态、规格和进度的主卡片。",
+      "html": "<article class=\"ds-project-card\"><div class=\"ds-project-media\"><span>景区推荐</span></div><div class=\"ds-project-copy\"><h3>西湖夏日夜游</h3><p>杭州 · 山海活力</p><div class=\"ds-project-meta\">30s&nbsp;&nbsp; 9:16&nbsp;&nbsp; 林知夏</div></div></article>",
+      "css": ".ds-project-card { width:300px; overflow:hidden; border:1px solid var(--line); border-radius:15px; color:var(--ink); background:#fff; box-shadow:0 9px 30px rgba(45,78,72,.045); font-family:'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; cursor:pointer; transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; } .ds-project-card:hover { transform:translateY(-4px); border-color:#c8d9d5; box-shadow:0 14px 38px rgba(38,77,69,.08); } .ds-project-card:focus-visible { outline:3px solid rgba(57,127,122,.25); outline-offset:2px; } .ds-project-media { display:flex; align-items:flex-start; aspect-ratio:16/8.5; padding:12px; background:linear-gradient(145deg,#9bbdb8,#dfe9e6 60%,#86a9a3); } .ds-project-media span { padding:5px 8px; border-radius:7px; color:#28413d; background:rgba(255,255,255,.84); font-size:11px; font-weight:600; } .ds-project-copy { padding:15px 16px 14px; } .ds-project-copy h3 { margin:0; font-size:15px; } .ds-project-copy p { margin:6px 0 12px; color:var(--muted); font-size:11px; } .ds-project-meta { color:#71807d; font-size:11px; }"
+    },
+    {
+      "name": "Prompt Composer",
+      "kind": "custom",
+      "description": "极速创建页的沉浸式自然语言输入与唯一主提交动作。",
+      "html": "<div class=\"ds-prompt-composer\"><textarea aria-label=\"视频创作需求\" placeholder=\"例如：为西湖夏日夜游制作一支 30 秒竖屏宣传片……\"></textarea><div><button type=\"button\">杭州</button><button class=\"ds-prompt-submit\" type=\"button\" aria-label=\"提交\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M12 19V5M6.5 10.5 12 5l5.5 5.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div></div>",
+      "css": ".ds-prompt-composer { width:520px; overflow:hidden; border:1px solid rgba(255,255,255,.92); border-radius:19px; background:rgba(255,255,255,.88); box-shadow:0 22px 65px rgba(44,80,73,.12); backdrop-filter:blur(20px); font-family:'Microsoft YaHei UI','PingFang SC','Segoe UI',sans-serif; transition:border-color .2s ease,box-shadow .2s ease; } .ds-prompt-composer:focus-within { border-color:rgba(57,127,122,.46); box-shadow:0 28px 70px rgba(44,80,73,.16); } .ds-prompt-composer textarea { display:block; width:100%; min-height:110px; padding:20px 22px 8px; resize:none; border:0; outline:0; color:var(--ink); background:transparent; font-size:14px; line-height:1.75; } .ds-prompt-composer > div { display:flex; justify-content:space-between; padding:8px 11px 11px; } .ds-prompt-composer button { min-height:33px; padding:0 9px; border:0; border-radius:9px; color:#657571; background:#f1f5f4; cursor:pointer; } .ds-prompt-composer button:hover { background:#e7efed; } .ds-prompt-composer button:focus-visible { outline:3px solid rgba(57,127,122,.25); outline-offset:2px; } .ds-prompt-composer .ds-prompt-submit { display:grid; place-items:center; width:39px; height:39px; padding:0; border-radius:11px; color:#fff; background:var(--accent); } .ds-prompt-composer .ds-prompt-submit:hover { background:var(--accent-strong); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "雾中玉简",
+    "overview": "“浙旅智创”的界面像一册铺开在江南晨雾中的数字玉简：矿物青玉色提供可信、清醒的操作线索，雾白与冷灰承载高密度内容，山水影像只在能够建立浙江地域感的关键时刻出现。系统服务于持续操作而非展陈，因此视觉表达克制、编辑感明确，状态、版本、来源和审核证据始终比装饰更醒目。\n\n桌面端采用稳定的左侧工作轨与宽阔内容画布，专业流程允许更高的信息密度；移动端则将左轨折叠为紧凑头部和抽屉导航。透明与模糊只用于顶部栏、提示浮层和沉浸式创建页，以形成“雾”的空间感，不侵入表格、审核或设置等需要精确阅读的区域。",
+    "keyCharacteristics": [
+      "冷静的矿物青玉单主色，辅以雾白、墨绿黑与低饱和语义色。",
+      "细边框、轻阴影和色调分层共同建立可信而不喧闹的工作空间。",
+      "面向操作的高密度排版，11px 标签与 13px 正文形成清晰节奏。",
+      "浙江山水影像作为场所证据与情绪锚点，而不是通用装饰背景。",
+      "状态、进度、审核风险和来源信息在颜色之外保留文字或形状线索。"
+    ],
+    "rules": [
+      { "name": "The One Jade Rule", "body": "一个视图只保留一种主操作声音；矿物青玉负责“可行动”，语义色只负责“可判断”。", "section": "colors" },
+      { "name": "The No Pure Black Rule", "body": "大面积文字和图标使用湿墨色，不使用纯黑压迫雾白画布。", "section": "colors" },
+      { "name": "The Editorial Density Rule", "body": "11px 用于短标签与元数据，13px 用于完整语句；不要把长说明压缩进标签字号。", "section": "typography" },
+      { "name": "The Quiet Headline Rule", "body": "标题通过负字距和稳定字重取得权威感，不使用全大写中文、描边字或装饰字体。", "section": "typography" },
+      { "name": "The Trace Before Space Rule", "body": "当空间收缩时，优先保留状态、进度、来源和审核动作；统计摘要、用户副标题与装饰性信息可以后退或隐藏。", "section": "layout" },
+      { "name": "The Flat Workflow Rule", "body": "审核、设置和节点详情默认平放在结构边界中；只有交互状态或空间叠加需要阴影。", "section": "elevation" },
+      { "name": "The Mist Has a Boundary Rule", "body": "玻璃模糊必须同时具备可辨识边框或色调差，不能让关键文字直接漂浮在复杂影像上。", "section": "elevation" },
+      { "name": "The Radius Follows Scale Rule", "body": "元素越小，圆角越收敛；大圆角只属于真正的大容器或沉浸式输入。", "section": "shapes" }
+    ],
+    "dos": [
+      "用矿物青玉统一主要操作、选中、进度和键盘焦点。",
+      "用边框、文字和图形共同表达状态，确保语义不依赖颜色。",
+      "在桌面保留高密度、可追溯的工作区，在 900px 与 680px 两级有计划地重排。",
+      "只在创建入口、影像预览和品牌时刻使用江南山水与雾化玻璃。",
+      "为所有动画保留 `prefers-reduced-motion` 降级。"
+    ],
+    "donts": [
+      "引入第二种高饱和品牌色与青玉争夺主操作层级。",
+      "把审核、表单或设置区域铺成半透明玻璃，削弱文字和证据的清晰度。",
+      "给每个分组添加明显阴影；常规结构首先依靠白面、雾面和水线。",
+      "使用通用霓虹渐变、纯黑大底或过度圆润的消费级卡通样式。",
+      "为了移动端简化而隐藏状态、来源、版本或审核动作。"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<script setup lang="ts">
+import { computed, ref } from 'vue'
+import { PhCheckCircle, PhCircle, PhClock, PhFileText, PhMagnifyingGlass, PhPlay, PhShieldCheck, PhWarningCircle, PhXCircle } from '@phosphor-icons/vue'
+import { projects, risks } from '@/data/mock'
+const selectedProject = ref(projects[1])
+const decision = ref<'approve' | 'reject' | null>(null)
+const note = ref('')
+const activeRisk = ref(risks[0].id)
+const sourceOpen = ref(false)
+const feedback = ref('')
+const currentRisk = computed(() => risks.find((risk) => risk.id === activeRisk.value) ?? risks[0])
+function notify(message: string) { feedback.value = message; window.setTimeout(() => { feedback.value = '' }, 2200) }
+</script>
+<template>
+  <div class="page review-page"><section class="page-heading"><div><h1>审核中心</h1><p>集中核对事实、文化表述、内容安全与素材版权。</p></div><label class="page-search"><PhMagnifyingGlass :size="18" /><input placeholder="搜索待审核项目" /></label></section>
+    <div class="review-layout"><aside class="review-queue panel"><header><div><strong>待审核项目</strong><span>3 项</span></div><button>按提交时间</button></header><button v-for="project in projects.slice(1,4)" :key="project.id" class="queue-item" :class="{ active: selectedProject.id === project.id }" @click="selectedProject = project"><img :src="project.thumbnail" alt="" /><span><strong>{{ project.title }}</strong><small>{{ project.city }} · {{ project.duration }}s</small></span><PhClock :size="16" /></button></aside>
+      <section class="review-canvas"><div class="review-video"><img src="/images/zhejiang-mist-lake.png" :alt="`${selectedProject.title} 审核预览`" /><button aria-label="播放审核预览" @click="notify('审核预览播放已开始')"><PhPlay :size="28" weight="fill" /></button><div class="timeline"><span>00:00</span><div><i /></div><span>00:45</span></div></div><div class="risk-summary"><div><span class="risk-number high">1</span><p><strong>高风险</strong><small>提交前必须处理</small></p></div><div><span class="risk-number medium">1</span><p><strong>需关注</strong><small>建议人工确认</small></p></div><div><span class="risk-number low">1</span><p><strong>低风险</strong><small>可优化表达</small></p></div><div><PhShieldCheck :size="28" /><p><strong>画面安全通过</strong><small>未发现违规内容</small></p></div></div><div class="risk-list"><button v-for="risk in risks" :key="risk.id" :class="[`risk-${risk.level}`, { active: activeRisk === risk.id }]" @click="activeRisk = risk.id"><PhWarningCircle :size="20" weight="fill" /><span><strong>{{ risk.title }}</strong><small>{{ risk.category }} · {{ risk.timecode }}</small></span><PhCheckCircle v-if="risk.level === 'low'" :size="18" /></button></div></section>
+      <aside class="review-detail panel"><header><PhFileText :size="20" /><strong>审核详情</strong></header><div class="project-facts"><dl><dt>提交人</dt><dd>{{ selectedProject.owner }}</dd><dt>城市</dt><dd>{{ selectedProject.city }}</dd><dt>画幅</dt><dd>{{ selectedProject.ratio }}</dd><dt>时长</dt><dd>{{ selectedProject.duration }} 秒</dd></dl></div><div class="risk-detail"><span :class="`level-${currentRisk.level}`">{{ currentRisk.level === 'high' ? '高风险' : currentRisk.level === 'medium' ? '需关注' : '低风险' }}</span><h2>{{ currentRisk.title }}</h2><p>{{ currentRisk.description }}</p><button @click="sourceOpen = !sourceOpen">{{ sourceOpen ? '收起来源卡片' : '打开来源卡片' }}</button><p v-if="sourceOpen" class="source-note">浙江省文化和旅游厅官方资料卡 · 更新于 2026-08</p></div><div class="review-decision"><label>审核结论</label><div><button :class="{ active: decision === 'approve' }" @click="decision = 'approve'"><PhCheckCircle :size="18" />通过</button><button :class="{ active: decision === 'reject' }" @click="decision = 'reject'"><PhXCircle :size="18" />驳回</button></div><textarea v-model="note" rows="4" placeholder="填写审核意见与修改建议..." /><button class="primary-button" :disabled="!decision" @click="notify(decision === 'approve' ? '审核已通过并进入导出中心' : '项目已驳回至创作工作台')">提交审核结果</button></div><div class="history"><strong>审核记录</strong><p><PhCircle :size="12" weight="fill" /><span>自动审核完成<small>今天 09:42</small></span></p><p><PhCircle :size="12" weight="fill" /><span>周亦安提交审核<small>今天 09:38</small></span></p></div></aside>
+    </div><Transition name="toast"><div v-if="feedback" class="toast-message"><PhCheckCircle :size="18" weight="fill" />{{ feedback }}</div></Transition>
+  </div>
+</template>

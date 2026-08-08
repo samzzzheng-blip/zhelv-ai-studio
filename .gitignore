@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.pnpm-store/
+.playwright-cli/
+.vite-*.log
+*.tsbuildinfo
+.DS_Store
