@@ -2,7 +2,11 @@
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { PhArchiveTray, PhBell, PhBooks, PhCaretLeft, PhCaretRight, PhCheckCircle, PhCheckSquare, PhGear, PhList, PhMagnifyingGlass, PhPlus, PhSignOut, PhSquaresFour, PhUserCircle, PhVideoCamera } from '@phosphor-icons/vue'
+import { useGsapScope } from '@/composables/useGsapScope'
+import { gsap } from '@/motion/gsap'
+import { motion } from '@/motion/tokens'
 
+const shellRoot = ref<HTMLElement | null>(null)
 const collapsed = ref(false)
 const mobileOpen = ref(false)
 const noticeOpen = ref(false)
@@ -20,6 +24,15 @@ const nav = [
   { label: '系统设置', icon: PhGear, to: '/settings' },
 ]
 const pageTitle = computed(() => String(route.meta.title ?? '浙旅智创'))
+
+useGsapScope(shellRoot, ({ reducedMotion }) => {
+  if (reducedMotion) return
+  gsap.timeline({ defaults: { ease: motion.ease.enter } })
+    .from('.brand', { autoAlpha: 0, x: -12, duration: 0.4 })
+    .from('.nav-item', { autoAlpha: 0, x: -10, duration: 0.36, stagger: 0.045 }, '-=0.24')
+    .from('.sidebar-foot', { autoAlpha: 0, y: 10, duration: 0.4 }, '-=0.2')
+    .from('.topbar > *', { autoAlpha: 0, y: -8, duration: 0.38, stagger: 0.06 }, 0.08)
+})
 function navigate(to: string) { mobileOpen.value = false; void router.push(to) }
 function runSearch() {
   const query = globalSearch.value.trim()
@@ -36,7 +49,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleShortcut))
 </script>
 
 <template>
-  <div class="app-frame" :class="{ 'is-collapsed': collapsed, 'has-mobile-nav': mobileOpen }">
+  <div ref="shellRoot" class="app-frame" :class="{ 'is-collapsed': collapsed, 'has-mobile-nav': mobileOpen }">
     <aside class="sidebar" aria-label="主导航">
       <button class="brand" type="button" aria-label="返回项目中心" @click="navigate('/projects')">
         <span class="brand-mark"><span>浙</span></span>

@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { PhArrowRight, PhCheck, PhDeviceMobile, PhShieldCheck, PhSparkle } from '@phosphor-icons/vue'
+import { useGsapScope } from '@/composables/useGsapScope'
+import { gsap } from '@/motion/gsap'
+import { motion } from '@/motion/tokens'
 
 const router = useRouter()
 const phone = ref('')
@@ -10,7 +13,24 @@ const agreed = ref(false)
 const countdown = ref(0)
 const error = ref('')
 const loading = ref(false)
+const root = ref<HTMLElement | null>(null)
 let timer: number | undefined
+
+useGsapScope(root, ({ reducedMotion }) => {
+  if (reducedMotion) return
+  const timeline = gsap.timeline({ defaults: { ease: motion.ease.enter } })
+  timeline
+    .from('.login-visual > img', { scale: 1.09, duration: 1.4 })
+    .from('.login-brand', { autoAlpha: 0, y: -14, duration: 0.48 }, 0.08)
+    .from('.login-manifesto > *', { autoAlpha: 0, y: 22, duration: 0.68, stagger: 0.09 }, 0.2)
+    .from('.login-trust span', { autoAlpha: 0, y: 10, duration: 0.45, stagger: 0.07 }, 0.48)
+    .from('.login-card > *', { autoAlpha: 0, y: 16, duration: 0.5, stagger: 0.06 }, 0.25)
+})
+
+watch(error, (message) => {
+  if (!message || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  gsap.fromTo('.login-card form', { x: -4 }, { x: 0, duration: 0.42, ease: 'elastic.out(1, 0.35)', clearProps: 'transform' })
+})
 
 const canSend = computed(() => /^1\d{10}$/.test(phone.value) && countdown.value === 0)
 const canLogin = computed(() => /^1\d{10}$/.test(phone.value) && /^\d{6}$/.test(code.value) && agreed.value && !loading.value)
@@ -44,11 +64,11 @@ onBeforeUnmount(() => { if (timer) window.clearInterval(timer) })
 </script>
 
 <template>
-  <main class="login-page">
+  <main ref="root" class="login-page">
     <section class="login-visual" aria-label="江南山水品牌画面">
       <img src="/images/west-lake-boat.jpg" alt="西湖薄雾、游船与雷峰塔" />
       <div class="login-brand"><span class="brand-mark brand-mark--large"><span>浙</span></span><div><strong>浙旅智创</strong><small>AI VIDEO STUDIO</small></div></div>
-      <div class="login-manifesto"><span><PhSparkle :size="17" weight="fill" />可信 · 可溯源 · 可协作</span><h1>让浙江的每一处风景，<br />都有准确而动人的表达。</h1><p>从权威事实到分镜、审核与多平台交付，一条可追溯的城市短视频生产链。</p></div>
+      <div class="login-manifesto"><span><PhSparkle :size="17" weight="fill" />可信 · 可溯源 · 可协作</span><h1>让浙江的每一处风景，<br /><em>都有准确而动人的表达。</em></h1><p>从权威事实到分镜、审核与多平台交付，一条可追溯的城市短视频生产链。</p></div>
       <div class="login-trust"><span><PhShieldCheck :size="18" />事实来源强绑定</span><span><PhCheck :size="18" />版权材料随片归档</span></div>
     </section>
     <section class="login-panel">
