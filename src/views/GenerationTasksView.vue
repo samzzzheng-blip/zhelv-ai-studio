@@ -48,7 +48,6 @@ useGsapScope(root, ({ reducedMotion }) => {
     .from('.tasks-heading > div:first-child', { autoAlpha: 0, y: 14, duration: 0.5 })
     .from('.task-health', { autoAlpha: 0, clipPath: 'inset(0 12% 0 0 round 14px)', duration: 0.56 }, 0.08)
     .from('.task-filter-rail', { autoAlpha: 0, y: 10, duration: 0.4 }, 0.18)
-    .from('.task-table-shell', { autoAlpha: 0, y: 15, duration: 0.48 }, 0.24)
 })
 
 function syncQuery() {

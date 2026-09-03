@@ -27,8 +27,8 @@ window.setTimeout(() => { booting.value = false }, 520)
   </Transition>
   <RouterView v-if="isStandalone" />
   <AppShell v-else>
-    <RouterView v-slot="{ Component }">
-      <Transition name="page" mode="out-in"><component :is="Component" /></Transition>
+    <RouterView v-slot="{ Component, route: viewRoute }">
+      <component :is="Component" :key="viewRoute.path" />
     </RouterView>
   </AppShell>
 </template>

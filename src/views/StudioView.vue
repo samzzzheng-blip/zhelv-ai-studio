@@ -18,8 +18,8 @@ useGsapScope(root, ({ reducedMotion }) => {
   timeline
     .from('.studio-heading > *', { autoAlpha: 0, y: 12, duration: 0.42, stagger: 0.06 })
     .from('.workspace-header', { autoAlpha: 0, y: 8, duration: 0.34 }, '-=0.2')
-    .from('.node-card', { autoAlpha: 0, x: -14, duration: 0.42, stagger: 0.075 }, '-=0.14')
-    .from('.node-arrow', { autoAlpha: 0, scaleX: 0, transformOrigin: 'left center', duration: 0.28, stagger: 0.075 }, '<0.08')
+    .from('.node-card', { autoAlpha: 0, x: -14, duration: 0.42, stagger: 0.075, clearProps: 'transform,opacity,visibility' }, '-=0.14')
+    .from('.node-arrow', { autoAlpha: 0, scaleX: 0, transformOrigin: 'left center', duration: 0.28, stagger: 0.075, clearProps: 'transform,opacity,visibility' }, '<0.08')
     .from('.node-detail', { autoAlpha: 0, y: 14, duration: 0.46 }, '-=0.18')
     .from('.copilot-panel', { autoAlpha: 0, x: 16, duration: 0.48 }, 0.16)
     .fromTo('.node-progress i', { scaleX: 0 }, { scaleX: 0.68, transformOrigin: 'left', duration: 0.9, ease: 'power2.inOut' }, '-=0.3')

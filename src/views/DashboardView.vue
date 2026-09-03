@@ -44,7 +44,8 @@ async function loadProjects() {
     projects.value = result.rows.map(toUiProject)
     await nextTick()
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      gsap.from('.project-card, .new-project-card', { autoAlpha: 0, y: 18, duration: 0.56, stagger: motion.stagger.standard, clearProps: 'opacity,transform' })
+      const cards = root.value?.querySelectorAll('.project-card, .new-project-card')
+      if (cards?.length) gsap.from(cards, { autoAlpha: 0, y: 18, duration: 0.56, stagger: motion.stagger.standard, clearProps: 'opacity,transform' })
     }
   } catch (cause) {
     error.value = cause instanceof ApiError ? cause.message : '项目数据加载失败。'
