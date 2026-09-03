@@ -159,8 +159,8 @@ components:
 
 ## Typography
 
-**Display Font:** Microsoft YaHei UI（回退至 PingFang SC、Segoe UI、sans-serif）  
-**Body Font:** Microsoft YaHei UI（回退至 PingFang SC、Segoe UI、sans-serif）  
+**Display Font:** Microsoft YaHei UI（回退至 PingFang SC、Segoe UI、sans-serif）
+**Body Font:** Microsoft YaHei UI（回退至 PingFang SC、Segoe UI、sans-serif）
 **Label Font:** Microsoft YaHei UI（回退至 PingFang SC、Segoe UI、sans-serif）
 
 **Character:** 单一现代无衬线字体保证中文政务内容的稳定性和跨平台可读性。层级主要依赖字号、字重、字距与留白，而不通过混搭字体制造戏剧性。
